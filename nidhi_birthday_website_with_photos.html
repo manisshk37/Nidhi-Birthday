@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Nidhi 🎂</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:#090014;color:#fff;overflow-x:hidden;
+}
+canvas{position:fixed;inset:0;pointer-events:none;z-index:20}
+.page{
+  min-height:100vh;position:relative;display:flex;align-items:center;
+  justify-content:center;text-align:center;padding:30px 18px;overflow:hidden;
+}
+.stars,.stars:before,.stars:after{
+  content:"";position:absolute;inset:0;background-image:
+  radial-gradient(circle,rgba(255,255,255,.85) 1px,transparent 1.5px);
+  background-size:90px 90px;animation:drift 20s linear infinite;opacity:.45;
+}
+.stars:before{background-size:130px 130px;animation-duration:30s;opacity:.25}
+.stars:after{background-size:170px 170px;animation-duration:40s;opacity:.18}
+@keyframes drift{to{transform:translateY(90px)}}
+.glow{position:absolute;width:420px;height:420px;border-radius:50%;
+background:#ff4fa3;filter:blur(100px);opacity:.18}
+.hero{z-index:2;max-width:900px}
+.badge{display:inline-block;padding:8px 16px;border:1px solid #ffffff33;border-radius:999px;
+background:#ffffff0d;backdrop-filter:blur(10px);font-size:.9rem;margin-bottom:22px}
+h1{font-size:clamp(3.4rem,12vw,8rem);line-height:.9;
+background:linear-gradient(90deg,#fff,#ff9fd1,#ffd166,#fff);
+-webkit-background-clip:text;color:transparent;background-size:200%;
+animation:shine 4s linear infinite}
+@keyframes shine{to{background-position:200%}}
+.subtitle{font-size:clamp(1.1rem,3vw,1.6rem);margin:25px auto;max-width:650px;color:#f4ddec}
+.btn{
+border:0;border-radius:999px;padding:14px 28px;font-weight:800;font-size:1rem;
+cursor:pointer;background:linear-gradient(135deg,#ff4fa3,#ff8a5c);color:white;
+box-shadow:0 12px 35px #ff4fa355;transition:.25s
+}
+.btn:hover{transform:translateY(-3px) scale(1.03)}
+.scroll{position:absolute;bottom:25px;font-size:.8rem;opacity:.55}
+section{padding:90px 20px;position:relative;background:linear-gradient(#090014,#120019)}
+.container{max-width:1050px;margin:auto;text-align:center}
+.section-title{font-size:clamp(2rem,6vw,4rem);margin-bottom:18px}
+.section-text{color:#d9bfd4;max-width:700px;margin:0 auto 40px;line-height:1.7}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{
+padding:28px;border:1px solid #ffffff14;background:#ffffff08;border-radius:24px;
+backdrop-filter:blur(12px);transition:.3s
+}
+.card:hover{transform:translateY(-8px);background:#ffffff10}
+.icon{font-size:2.8rem;margin-bottom:12px}
+.card h3{margin-bottom:8px}.card p{color:#cdb6c9;line-height:1.6}
+.cake-wrap{margin:35px auto 15px;width:220px;height:210px;position:relative}
+.cake{position:absolute;bottom:15px;left:20px;width:180px;height:95px;border-radius:15px 15px 25px 25px;
+background:linear-gradient(#ff7eb8 0 25%,#fff0f7 25% 35%,#ff5b9d 35% 100%);
+box-shadow:0 20px 35px #0005}
+.cake:before{content:"";position:absolute;top:-35px;left:0;width:180px;height:48px;border-radius:50%;
+background:#fff0f7;border:5px solid #ff7eb8}
+.candle{position:absolute;bottom:108px;left:103px;width:14px;height:45px;background:#ffd166;border-radius:5px}
+.flame{position:absolute;bottom:150px;left:103px;width:16px;height:25px;border-radius:50% 50% 50% 0;
+background:#ffb703;transform:rotate(-45deg);animation:flicker .5s infinite alternate}
+@keyframes flicker{to{transform:rotate(-45deg) scale(1.15)}}
+.message{
+max-width:780px;margin:30px auto;padding:38px;border-radius:28px;
+background:linear-gradient(135deg,#ff4fa31a,#ffd16612);border:1px solid #ffffff18;
+font-size:clamp(1.1rem,2.5vw,1.4rem);line-height:1.8;color:#ffeaf5
+}
+.reveal{display:none;margin-top:25px;animation:appear .8s ease}
+.reveal.show{display:block}
+@keyframes appear{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+footer{padding:40px 20px;text-align:center;background:#07000d;color:#a98fa4}
+.heart{display:inline-block;animation:beat 1s infinite}
+@keyframes beat{50%{transform:scale(1.25)}}
+.balloon{position:absolute;width:45px;height:58px;border-radius:50%;opacity:.65;
+animation:float 7s ease-in-out infinite}
+.balloon:after{content:"";position:absolute;left:50%;top:57px;width:1px;height:110px;background:#ffffff33}
+.b1{left:7%;top:20%;background:#ff4fa3}.b2{right:8%;top:30%;background:#7c5cff;animation-delay:1s}
+.b3{left:15%;bottom:15%;background:#ffd166;animation-delay:2s}.b4{right:15%;bottom:18%;background:#55d6be;animation-delay:3s}
+@keyframes float{50%{transform:translateY(-35px) rotate(5deg)}}
+.music{position:fixed;right:18px;bottom:18px;z-index:30;width:48px;height:48px;border-radius:50%;
+border:1px solid #ffffff22;background:#ffffff12;color:white;cursor:pointer;font-size:1.2rem}
+.small{font-size:.9rem;color:#ad91a6;margin-top:12px}
+.photos{background:linear-gradient(#120019,#090014)}.photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;max-width:1000px;margin:auto}.photo-card{position:relative;overflow:hidden;border-radius:28px;background:#ffffff0b;border:1px solid #ffffff18;box-shadow:0 18px 50px #0005;transition:.35s}.photo-card:hover{transform:translateY(-8px) scale(1.015)}.photo-card img{display:block;width:100%;height:420px;object-fit:cover;transition:.5s}.photo-card:hover img{transform:scale(1.06)}.photo-card span{display:block;padding:16px;color:#ffeaf5;font-weight:700}</style>
+</head>
+<body>
+<canvas id="confetti"></canvas>
+
+<div class="page" id="home">
+  <div class="stars"></div><div class="glow"></div>
+  <div class="balloon b1"></div><div class="balloon b2"></div><div class="balloon b3"></div><div class="balloon b4"></div>
+  <div class="hero">
+    <div class="badge">✨ A little surprise made just for you</div>
+    <h1>Nidhi</h1>
+    <p class="subtitle">Today the whole universe has one reason to celebrate... <b>YOU!</b> 💖</p>
+    <button class="btn" onclick="startSurprise()">🎁 Open Your Surprise</button>
+    <p class="small">Turn your sound on for the full experience 🎵</p>
+  </div>
+  <div class="scroll">↓ scroll down ↓</div>
+</div>
+
+<section>
+  <div class="container">
+    <h2 class="section-title">🎂 Happy Birthday, Nidhi!</h2>
+    <p class="section-text">May your special day be filled with laughter, beautiful memories, endless smiles and everything that makes your heart happy.</p>
+    <div class="cake-wrap">
+      <div class="flame"></div><div class="candle"></div><div class="cake"></div>
+    </div>
+    <button class="btn" onclick="blowCandles()">🕯️ Make a Wish</button>
+    <div id="wish" class="reveal message">✨ Wish made! May it come true sooner than you expect. ✨</div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="section-title">💖 Why You're Special</h2>
+    <p class="section-text">Some people make ordinary days feel a little more beautiful. You're one of them.</p>
+    <div class="card-grid">
+      <div class="card"><div class="icon">😊</div><h3>Your Smile</h3><p>Never stop smiling. It makes the world around you brighter.</p></div>
+      <div class="card"><div class="icon">🌸</div><h3>Your Kindness</h3><p>Your little acts of kindness can mean more than you know.</p></div>
+      <div class="card"><div class="icon">✨</div><h3>Your Energy</h3><p>You have a special way of making moments memorable.</p></div>
+      <div class="card"><div class="icon">💫</div><h3>Your Presence</h3><p>Some people are simply a gift to have in your life.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="photos"><div class="container"><h2 class="section-title">📸 Our Beautiful Memories</h2><p class="section-text">A few moments that deserve a special place on your birthday. ❤️</p><div class="photo-grid"><div class="photo-card"><img src="photos/nidhi-01.jpg" alt="Nidhi and a special friend"><span>💗 A beautiful memory</span></div><div class="photo-card"><img src="photos/nidhi-02.jpg" alt="Animated memory of Nidhi"><span>✨ A little magic</span></div><div class="photo-card"><img src="photos/nidhi-03.jpg" alt="Nidhi in traditional dress"><span>🌸 Always beautiful</span></div></div></div></section>
+<section>
+  <div class="container">
+    <h2 class="section-title">💌 A Message For You</h2>
+    <div class="message">
+      Dear Nidhi,<br><br>
+      On your birthday, I just want to remind you how wonderful you are.
+      I hope this new chapter brings you countless reasons to smile, people
+      who genuinely care about you, adventures worth remembering, and dreams
+      that turn into reality. 🌷<br><br>
+      Keep shining, keep laughing, and always be the amazing person you are.
+      <br><br>
+      <b>Happy Birthday once again! 🎉❤️</b>
+    </div>
+    <button class="btn" onclick="finalSurprise()">💝 One Last Surprise</button>
+    <div id="final" class="reveal message">
+      <div style="font-size:3rem">🎉🥳🎂💖✨</div>
+      <h2 style="margin:15px 0">NIDHI, YOU ARE AMAZING!</h2>
+      <p>May your year ahead be your best one yet. 🌟</p>
+    </div>
+  </div>
+</section>
+
+<footer>Made with <span class="heart">❤️</span> specially for Nidhi</footer>
+
+<button class="music" id="musicBtn" onclick="toggleMusic()" title="Music">🎵</button>
+
+<script>
+const canvas=document.getElementById("confetti"),ctx=canvas.getContext("2d");
+let pieces=[],running=false;
+function resize(){canvas.width=innerWidth;canvas.height=innerHeight}
+addEventListener("resize",resize);resize();
+
+function confettiBurst(count=220){
+  pieces=[];
+  for(let i=0;i<count;i++) pieces.push({
+    x:innerWidth/2,y:innerHeight*.35,
+    vx:(Math.random()-.5)*15,vy:Math.random()*-12-3,
+    g:.25+Math.random()*.15,size:5+Math.random()*7,
+    r:Math.random()*6,vr:(Math.random()-.5)*.3,
+    life:100+Math.random()*100
+  });
+  if(!running){running=true;animate()}
+}
+function animate(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  pieces.forEach(p=>{
+    p.x+=p.vx;p.y+=p.vy;p.vy+=p.g;p.r+=p.vr;p.life--;
+    ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.r);
+    ctx.fillStyle=`hsl(${Math.random()*360},90%,65%)`;
+    ctx.fillRect(-p.size/2,-p.size/2,p.size,p.size);
+    ctx.restore();
+  });
+  pieces=pieces.filter(p=>p.life>0&&p.y<innerHeight+30);
+  if(pieces.length)requestAnimationFrame(animate);else{running=false;ctx.clearRect(0,0,canvas.width,canvas.height)}
+}
+function startSurprise(){
+  confettiBurst();
+  document.querySelector("#home").scrollIntoView({behavior:"smooth"});
+  setTimeout(()=>document.querySelectorAll("section")[0].scrollIntoView({behavior:"smooth"}),900);
+}
+function blowCandles(){
+  document.querySelector(".flame").style.display="none";
+  document.getElementById("wish").classList.add("show");
+  confettiBurst(180);
+}
+function finalSurprise(){
+  document.getElementById("final").classList.add("show");
+  confettiBurst(300);
+  setTimeout(()=>document.getElementById("final").scrollIntoView({behavior:"smooth",block:"center"}),100);
+}
+
+/* Simple optional birthday tune using Web Audio - no external file needed */
+let audioCtx=null,playing=false,timer=null;
+function toggleMusic(){
+  const btn=document.getElementById("musicBtn");
+  if(playing){clearInterval(timer);playing=false;btn.textContent="🎵";return}
+  audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+  playing=true;btn.textContent="⏸️";
+  const notes=[261.63,261.63,293.66,261.63,349.23,329.63,261.63,261.63,293.66,261.63,392,349.23];
+  let i=0;
+  function play(){
+    if(!playing)return;
+    const o=audioCtx.createOscillator(),g=audioCtx.createGain();
+    o.type="sine";o.frequency.value=notes[i++%notes.length];
+    g.gain.setValueAtTime(.0001,audioCtx.currentTime);
+    g.gain.exponentialRampToValueAtTime(.08,audioCtx.currentTime+.02);
+    g.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+.42);
+    o.connect(g).connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+.45);
+  }
+  play();timer=setInterval(play,500);
+}
+</script>
+</body>
+</html>
